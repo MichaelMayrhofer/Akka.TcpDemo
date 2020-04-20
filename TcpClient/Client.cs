@@ -27,6 +27,7 @@ namespace TcpClient
         {
             // Closes the TCP connection...
             connectionActor?.Tell(Tcp.Close.Instance);
+            Context.Stop(Self);
         }
 
         private void HandleConnected(Tcp.Connected m)
