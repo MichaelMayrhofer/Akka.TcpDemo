@@ -14,8 +14,7 @@ namespace TcpClient
             Console.ReadLine();
             client.Tell(new StartMessage());
 
-            Console.WriteLine("press [enter] to stop tcp client");
-            Console.ReadLine();
+            Console.WriteLine("try to stop client automatically");
             client.Tell(new StopMessage());
 
             Console.WriteLine("press [enter] to close demo");
